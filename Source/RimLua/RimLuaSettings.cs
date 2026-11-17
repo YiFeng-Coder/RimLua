@@ -19,6 +19,19 @@ namespace RimLua
         // 持久化
         public int maxStateKb = 256;
 
+        public void ResetToDefaults()
+        {
+            enableLocalScripts = true;
+            autoReloadLocalScripts = true;
+            runSmokeTestsOnLoad = true;
+            sliceInstructionBudget = 5000;
+            scriptWallClockBudgetMs = 50;
+            enableApiTiming = true;
+            apiCallBudgetMs = 10.0;
+            apiCallWarnMs = 2.0;
+            maxStateKb = 256;
+        }
+
         public override void ExposeData()
         {
             Scribe_Values.Look(ref enableLocalScripts, "enableLocalScripts", true);

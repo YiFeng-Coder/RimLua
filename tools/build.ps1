@@ -1,4 +1,4 @@
-﻿# RimLua M0 build script (direct csc compile; avoids MSBuild temp-dir issues in some sandboxes)
+# RimLua M0 build script (direct csc compile; avoids MSBuild temp-dir issues in some sandboxes)
 # Usage:
 #   powershell -ExecutionPolicy Bypass -File tools/build.ps1
 #   powershell -ExecutionPolicy Bypass -File tools/build.ps1 -Configuration Debug
@@ -94,6 +94,30 @@ $cscArgs = @("exec", $csc, "-noconfig", "-nostdlib+", "-target:library", "-langv
 & $dotnet @cscArgs
 if ($LASTEXITCODE -ne 0) { throw "csc failed (exit $LASTEXITCODE)" }
 
-Copy-Item -LiteralPath $moonDll -Destination (Join-Path $outDir "MoonSharp.Interpreter.dll") -Force
+$moonDest = Join-Path $outDir "MoonSharp.Interpreter.dll"
+try
+{
+    Copy-Item -LiteralPath $moonDll -Destination $moonDest -Force -ErrorAction Stop
+}
+catch
+{
+    if (Test-Path $moonDest)
+    {
+        $srcHash = (Get-FileHash -LiteralPath $moonDll -Algorithm SHA256).Hash
+        $dstHash = (Get-FileHash -LiteralPath $moonDest -Algorithm SHA256).Hash
+        if ($srcHash -eq $dstHash)
+        {
+            Write-Host "MoonSharp DLL unchanged (locked by a running game); skip copy."
+        }
+        else
+        {
+            throw
+        }
+    }
+    else
+    {
+        throw
+    }
+}
 Write-Host "OK: $outDll (refs: $refDir)"
 Get-ChildItem $outDir -File | Select-Object Name, Length | Format-Table -AutoSize

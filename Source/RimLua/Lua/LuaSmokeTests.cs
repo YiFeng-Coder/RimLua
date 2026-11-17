@@ -66,6 +66,18 @@ namespace RimLua
             Flush();
         }
 
+        /// <summary>重新运行冒烟测试（供设置页/控制台调用；主线程）。</summary>
+        public static void RunAgain()
+        {
+            _begun = false;
+            _finished = false;
+            _pass = 0;
+            _fail = 0;
+            _ticks = 0;
+            _lines.Clear();
+            Begin();
+        }
+
         public static void Pump()
         {
             if (!_begun || _finished) return;

@@ -30,6 +30,7 @@
 | `:api` | 在控制台打印 API dump |
 | `:apidump` | 写 `<Config>/RimLua/api-dump.md` |
 | `:stats` | 第三方 API 调用次数/失败/预算违规/耗时 |
+| `:smoke` | 重新运行冒烟测试（主线程） |
 | `:state <id>` | 查看某脚本持久 state 的 JSON |
 | `:clear` | 清空控制台输出 |
 

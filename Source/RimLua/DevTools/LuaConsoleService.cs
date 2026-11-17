@@ -95,7 +95,7 @@ namespace RimLua
             switch (name)
             {
                 case "help":
-                    Add("命令: :help  :list  :reload [id]  :api  :apidump  :stats  :state [id]  :clear");
+                    Add("命令: :help  :list  :reload [id]  :api  :apidump  :stats  :state [id]  :smoke  :clear");
                     Add("直接输入 Lua 代码；= 开头表示表达式（自动 return）。");
                     break;
                 case "clear":
@@ -116,6 +116,10 @@ namespace RimLua
                     break;
                 case "stats":
                     DumpStats();
+                    break;
+                case "smoke":
+                    LuaSmokeTests.RunAgain();
+                    Add("已重新运行冒烟测试，结果见 " + RimLuaApi.SmokeReportPath);
                     break;
                 case "state":
                     DumpState(parts.Length > 1 ? parts[1] : null);

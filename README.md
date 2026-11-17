@@ -21,6 +21,7 @@
 ## 文档
 
 - [Docs/TUTORIAL_FOR_SUBMOD_AUTHORS.md](Docs/TUTORIAL_FOR_SUBMOD_AUTHORS.md)：**子模组开发教程（建议先读）**
+- [Docs/SETTINGS.md](Docs/SETTINGS.md)：设置页各选项说明
 - [Docs/EXTENSION_API.md](Docs/EXTENSION_API.md)：第三方 Lua C# API 参考
 - [Docs/CONSOLE_AND_PERSISTENCE.md](Docs/CONSOLE_AND_PERSISTENCE.md)：控制台与 state 持久化
 - [Docs/CALL_LUA_AND_APIDUMP.md](Docs/CALL_LUA_AND_APIDUMP.md)：C#→Lua、API dump、耗时预算
