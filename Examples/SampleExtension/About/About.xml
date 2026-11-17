@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>RimLua Sample API</name>
+  <author>Feng</author>
+  <packageId>Feng.RimLua.Sample</packageId>
+  <supportedVersions>
+    <li>1.7</li>
+  </supportedVersions>
+  <modVersion>1.0.0</modVersion>
+  <description>示例子模组：演示如何通过 RimLua 注册 Lua C# API（rim.sample.*）。</description>
+</ModMetaData>

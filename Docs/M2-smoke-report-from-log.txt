@@ -1,0 +1,62 @@
+﻿RimLua smoke tests
+time=2026-11-17 12:42:59
+game=1.7.5011 rev24
+mainThread=True
+
+PASS TestLoad: initialized=True, error=
+PASS TestLoad: sandbox instance created
+PASS TestLoad: MoonSharp version=3.0.0.0
+PASS moonSharp-load: ok
+PASS TestSandbox: global 'io' is nil
+PASS TestSandbox: global 'os' is nil
+PASS TestSandbox: global 'require' is nil
+PASS TestSandbox: global 'load' is nil
+PASS TestSandbox: global 'loadfile' is nil
+PASS TestSandbox: global 'dofile' is nil
+PASS TestSandbox: global 'loadstring' is nil
+PASS TestSandbox: global 'debug' is nil
+PASS TestSandbox: pcall present (ErrorHandling enabled)
+PASS TestSandbox: setmetatable present (Metatables enabled)
+PASS TestSandbox: coroutine global absent (host-driven slicing)
+PASS sandbox-globals: ok
+PASS TestSlice: infinite loop aborted: Aborted in 38.7 ms, slices=96, error=wall-clock budget exceeded (20 ms), status=Aborted
+PASS TestSlice: slices observed=96
+PASS TestSlice: abort returned in 38.7 ms
+PASS coroutine-slice: ok
+PASS TestParse: parse 65553 chars in 6 ms
+PASS parse-64k: ok
+PASS TestCallback: rim.add(20,22) returned 42 (Ok in 0.8 ms, slices=1)
+PASS callback: ok
+PASS TestMainThread: smoke tests executed on main thread
+PASS main-thread: ok
+PASS TestThirdPartyApi: third-party function -> 42 (Ok in 0.6 ms, slices=1)
+PASS TestThirdPartyApi: string marshal -> hi lua (Ok in 1.0 ms, slices=1)
+PASS TestThirdPartyApi: global -> m0 (Ok in 0.2 ms, slices=1)
+PASS TestThirdPartyApi: bad argument rejected -> Error (ScriptRuntimeException: [_selftest.add] expected number, got String)
+PASS thirdparty-api: ok
+PASS TestApiBudget: slow API rejected -> Error (ScriptRuntimeException: [_selftest.slow] API exceeded budget (25.5 ms > 5 ms))
+PASS TestApiBudget: budget violation recorded in stats
+PASS api-budget: ok
+PASS TestStatePersistence: first run -> Ok in 2.1 ms, slices=1
+PASS TestStatePersistence: second run -> Ok in 0.3 ms, slices=1
+PASS TestStatePersistence: state after two runs -> {"count":2}
+PASS TestStatePersistence: serialized state contains script id
+PASS TestStatePersistence: state survives save/load roundtrip -> {"count":2}
+PASS state-persistence: ok
+PASS TestCSharpCallLua: call test script loaded -> Ok in 4.1 ms, slices=1
+PASS TestCSharpCallLua: CallScript add -> Ok: 42 (0.9 ms)
+PASS TestCSharpCallLua: CallScript missing function rejected -> function not found: missing_function
+PASS TestCSharpCallLua: CallScript error propagated -> ScriptRuntimeException: boom
+PASS csharp-call-lua: ok
+PASS TestConsoleService: console expression -> -> 42  [Ok in 0.9 ms, slices=1]
+PASS console-service: ok
+PASS TestApiDump: api dump contains registered API and section
+PASS TestApiDump: api dump written -> D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\api-dump.md
+PASS api-dump: ok
+
+live-reload: waiting for watcher to execute _rimlua_selftest.lua
+PASS live-reload: Error in 1.2 ms, slices=0, error=ScriptRuntimeException: attempt to perform arithmetic on a table value
+
+RESULT: PASS (51 passed, 0 failed)
+moonSharp=3.0.0.0, reports=D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\smoke-report.txt
+finished: PASS, report=D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\smoke-report.txt

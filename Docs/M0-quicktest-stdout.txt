@@ -1,0 +1,61 @@
+﻿# RimLua M0 quicktest log (filtered)
+# game: RimWorld 1.7.5011 rev24, MoonSharp 3.0.0.0
+
+23:31:45  INFO Command line arguments: -quicktest -savedatafolder=D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata
+23:31:45  INFO RimWorld 1.7.5011 rev24
+23:31:45  INFO Save data folder overridden to D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata
+23:31:46  INFO Harmony Mod v3.0.1.0; Harmony library v3.0.0.0-rc.3
+23:31:46  INFO [RimLua] loaded v0.1.0-m0 (api 1), root=D:\SteamA\steamapps\common\RimWorld\Mods\AIStory
+23:31:58  INFO Initializing new game with mods:
+  - Feng.RimLua
+23:32:01  INFO [RimLua] MoonSharp 3.0.0.0 initialized on main thread=True
+23:32:01  INFO [RimLua][script] [core] RimLua core library loaded, version=0.1.0-m0
+23:32:01  INFO [RimLua][loader] executed init.lua (Ok in 8.2 ms, slices=1)
+23:32:01  INFO [RimLua][loader] sample script created: D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\scripts\00_hello.lua
+23:32:01  INFO [RimLua][script] hello from RimLua live script, version=0.1.0-m0, tick=1
+23:32:01  INFO [RimLua][loader] executed 00_hello.lua (Ok in 1.0 ms, slices=1)
+23:32:01  INFO [RimLua][loader] started, localDir=D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\scripts, loaded=2, watcher=True
+23:32:01  INFO [RimLua][smoke] RimLua M0 smoke tests
+23:32:01  INFO [RimLua][smoke] time=2026-11-16 23:32:01
+23:32:01  INFO [RimLua][smoke] game=1.7.5011 rev24
+23:32:01  INFO [RimLua][smoke] mainThread=True
+23:32:01  INFO [RimLua][smoke] 
+23:32:01  INFO [RimLua][smoke] PASS TestLoad: initialized=True, error=
+23:32:01  INFO [RimLua][smoke] PASS TestLoad: sandbox instance created
+23:32:01  INFO [RimLua][smoke] PASS TestLoad: MoonSharp version=3.0.0.0
+23:32:01  INFO [RimLua][smoke] PASS moonSharp-load: ok
+23:32:01  INFO [RimLua][smoke] PASS TestSandbox: global 'io' is nil
+23:32:01  INFO [RimLua][smoke] PASS TestSandbox: global 'os' is nil
+23:32:01  INFO [RimLua][smoke] PASS TestSandbox: global 'require' is nil
+23:32:01  INFO [RimLua][smoke] PASS TestSandbox: global 'load' is nil
+23:32:01  INFO [RimLua][smoke] PASS TestSandbox: global 'loadfile' is nil
+23:32:01  INFO [RimLua][smoke] PASS TestSandbox: global 'dofile' is nil
+23:32:01  INFO [RimLua][smoke] PASS TestSandbox: global 'loadstring' is nil
+23:32:01  INFO [RimLua][smoke] PASS TestSandbox: global 'debug' is nil
+23:32:01  INFO [RimLua][smoke] PASS TestSandbox: pcall present (ErrorHandling enabled)
+23:32:01  INFO [RimLua][smoke] PASS TestSandbox: setmetatable present (Metatables enabled)
+23:32:01  INFO [RimLua][smoke] PASS TestSandbox: coroutine global absent (host-driven slicing)
+23:32:01  INFO [RimLua][smoke] PASS sandbox-globals: ok
+23:32:01  INFO [RimLua][smoke] PASS TestSlice: infinite loop aborted: Aborted in 21.7 ms, slices=199, error=wall-clock budget exceeded (20 ms), status=Aborted
+23:32:01  INFO [RimLua][smoke] PASS TestSlice: slices observed=199
+23:32:01  INFO [RimLua][smoke] PASS TestSlice: abort returned in 21.7 ms
+23:32:01  INFO [RimLua][smoke] PASS coroutine-slice: ok
+23:32:01  INFO [RimLua][smoke] PASS TestParse: parse 65553 chars in 4 ms
+23:32:01  INFO [RimLua][smoke] PASS parse-64k: ok
+23:32:01  INFO [RimLua][smoke] PASS TestCallback: rim.add(20,22) returned 42 (Ok in 1.0 ms, slices=1)
+23:32:01  INFO [RimLua][smoke] PASS callback: ok
+23:32:01  INFO [RimLua][smoke] PASS TestMainThread: smoke tests executed on main thread
+23:32:01  INFO [RimLua][smoke] PASS main-thread: ok
+23:32:01  INFO [RimLua][loader] self-test script written: D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\scripts\_rimlua_selftest.lua
+23:32:01  INFO [RimLua][smoke] 
+23:32:01  INFO [RimLua][smoke] live-reload: waiting for watcher to execute _rimlua_selftest.lua
+23:32:01  INFO [RimLua][script] live-reload self test executed, rim.version=0.1.0-m0
+23:32:01  INFO [RimLua][loader] executed _rimlua_selftest.lua (Ok in 2.1 ms, slices=1)
+23:32:01  INFO [RimLua][smoke] PASS live-reload: Ok in 2.1 ms, slices=1
+23:32:01  INFO [RimLua][smoke] 
+23:32:01  INFO [RimLua][smoke] RESULT: PASS (27 passed, 0 failed)
+23:32:01  INFO [RimLua][smoke] moonSharp=3.0.0.0, reports=D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\smoke-report.txt
+23:32:01  INFO [RimLua][smoke] finished: PASS, report=D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\smoke-report.txt
+23:32:01  INFO [RimLua][loader] self-test script written: D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\scripts\_rimlua_selftest.lua
+23:32:01  INFO [RimLua][script] live-reload self test executed, rim.version=0.1.0-m0
+23:32:01  INFO [RimLua][loader] executed _rimlua_selftest.lua (Ok in 1.5 ms, slices=1)

@@ -1,0 +1,10 @@
+bin/
+obj/
+.build/
+.quicktest/
+*.user
+.vs/
+Docs/research/
+.tutorial_part*.md
+.harness/
+*.log

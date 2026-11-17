@@ -1,0 +1,86 @@
+﻿12:42:33  INFO [RimLua][api] registered module RimLuaSample.SampleLuaApi (sample): 6 entries
+12:42:33  INFO [RimLuaSample] registered 6 Lua API entries, rimluaReady=False
+12:42:33  INFO [RimLua] loaded v0.1.0-m0 (api 1), root=D:\SteamA\steamapps\common\RimWorld\Mods\AIStory
+  - Feng.RimLua.Sample
+12:42:59  INFO [RimLua] MoonSharp 3.0.0.0 initialized on main thread=True, third-party APIs=6
+12:42:59  INFO [RimLua][script] [core] RimLua core library loaded, version=0.1.0-m0
+12:42:59  INFO [RimLua][loader] executed core/init.lua (Ok in 12.9 ms, slices=1)
+12:42:59  INFO [RimLua][script] SAMPLE greet=Hello, RimWorld!
+12:42:59  INFO [RimLua][script] SAMPLE add=5
+12:42:59  INFO [RimLua][script] SAMPLE api_count=6
+12:42:59  INFO [RimLua][loader] executed local/zz_sample_test.lua (Ok in 4.3 ms, slices=1)
+12:42:59  INFO [RimLua][loader] started, localDir=D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\scripts, loaded=2, watcher=True
+12:42:59  INFO [RimLua][smoke] RimLua smoke tests
+12:42:59  INFO [RimLua][smoke] time=2026-11-17 12:42:59
+12:42:59  INFO [RimLua][smoke] game=1.7.5011 rev24
+12:42:59  INFO [RimLua][smoke] mainThread=True
+12:42:59  INFO [RimLua][smoke] 
+12:42:59  INFO [RimLua][smoke] PASS TestLoad: initialized=True, error=
+12:42:59  INFO [RimLua][smoke] PASS TestLoad: sandbox instance created
+12:42:59  INFO [RimLua][smoke] PASS TestLoad: MoonSharp version=3.0.0.0
+12:42:59  INFO [RimLua][smoke] PASS moonSharp-load: ok
+12:42:59  INFO [RimLua][smoke] PASS TestSandbox: global 'io' is nil
+12:42:59  INFO [RimLua][smoke] PASS TestSandbox: global 'os' is nil
+12:42:59  INFO [RimLua][smoke] PASS TestSandbox: global 'require' is nil
+12:42:59  INFO [RimLua][smoke] PASS TestSandbox: global 'load' is nil
+12:42:59  INFO [RimLua][smoke] PASS TestSandbox: global 'loadfile' is nil
+12:42:59  INFO [RimLua][smoke] PASS TestSandbox: global 'dofile' is nil
+12:42:59  INFO [RimLua][smoke] PASS TestSandbox: global 'loadstring' is nil
+12:42:59  INFO [RimLua][smoke] PASS TestSandbox: global 'debug' is nil
+12:42:59  INFO [RimLua][smoke] PASS TestSandbox: pcall present (ErrorHandling enabled)
+12:42:59  INFO [RimLua][smoke] PASS TestSandbox: setmetatable present (Metatables enabled)
+12:42:59  INFO [RimLua][smoke] PASS TestSandbox: coroutine global absent (host-driven slicing)
+12:42:59  INFO [RimLua][smoke] PASS sandbox-globals: ok
+12:42:59  INFO [RimLua][smoke] PASS TestSlice: infinite loop aborted: Aborted in 38.7 ms, slices=96, error=wall-clock budget exceeded (20 ms), status=Aborted
+12:42:59  INFO [RimLua][smoke] PASS TestSlice: slices observed=96
+12:42:59  INFO [RimLua][smoke] PASS TestSlice: abort returned in 38.7 ms
+12:42:59  INFO [RimLua][smoke] PASS coroutine-slice: ok
+12:42:59  INFO [RimLua][smoke] PASS TestParse: parse 65553 chars in 6 ms
+12:42:59  INFO [RimLua][smoke] PASS parse-64k: ok
+12:42:59  INFO [RimLua][smoke] PASS TestCallback: rim.add(20,22) returned 42 (Ok in 0.8 ms, slices=1)
+12:42:59  INFO [RimLua][smoke] PASS callback: ok
+12:42:59  INFO [RimLua][smoke] PASS TestMainThread: smoke tests executed on main thread
+12:42:59  INFO [RimLua][smoke] PASS main-thread: ok
+12:42:59  INFO [RimLua][smoke] PASS TestThirdPartyApi: third-party function -> 42 (Ok in 0.6 ms, slices=1)
+12:42:59  INFO [RimLua][smoke] PASS TestThirdPartyApi: string marshal -> hi lua (Ok in 1.0 ms, slices=1)
+12:42:59  INFO [RimLua][smoke] PASS TestThirdPartyApi: global -> m0 (Ok in 0.2 ms, slices=1)
+12:42:59  INFO [RimLua][smoke] PASS TestThirdPartyApi: bad argument rejected -> Error (ScriptRuntimeException: [_selftest.add] expected number, got String)
+12:42:59  INFO [RimLua][smoke] PASS thirdparty-api: ok
+12:42:59  INFO [RimLua][smoke] PASS TestApiBudget: slow API rejected -> Error (ScriptRuntimeException: [_selftest.slow] API exceeded budget (25.5 ms > 5 ms))
+12:42:59  INFO [RimLua][smoke] PASS TestApiBudget: budget violation recorded in stats
+12:42:59  INFO [RimLua][smoke] PASS api-budget: ok
+12:42:59  INFO [RimLua][loader] executed local/_rimlua_state_test.lua (Ok in 2.1 ms, slices=1)
+12:42:59  INFO [RimLua][smoke] PASS TestStatePersistence: first run -> Ok in 2.1 ms, slices=1
+12:42:59  INFO [RimLua][loader] executed local/_rimlua_state_test.lua (Ok in 0.3 ms, slices=1)
+12:42:59  INFO [RimLua][smoke] PASS TestStatePersistence: second run -> Ok in 0.3 ms, slices=1
+12:42:59  INFO [RimLua][smoke] PASS TestStatePersistence: state after two runs -> {"count":2}
+12:42:59  INFO [RimLua][smoke] PASS TestStatePersistence: serialized state contains script id
+12:42:59  INFO [RimLua][state] loaded state for 3 script(s)
+12:42:59  INFO [RimLua][smoke] PASS TestStatePersistence: state survives save/load roundtrip -> {"count":2}
+12:42:59  INFO [RimLua][smoke] PASS state-persistence: ok
+12:42:59  INFO [RimLua][loader] executed local/_rimlua_call_test.lua (Ok in 4.1 ms, slices=1)
+12:42:59  INFO [RimLua][smoke] PASS TestCSharpCallLua: call test script loaded -> Ok in 4.1 ms, slices=1
+12:42:59  INFO [RimLua][smoke] PASS TestCSharpCallLua: CallScript add -> Ok: 42 (0.9 ms)
+12:42:59  INFO [RimLua][smoke] PASS TestCSharpCallLua: CallScript missing function rejected -> function not found: missing_function
+12:42:59  INFO [RimLua][smoke] PASS TestCSharpCallLua: CallScript error propagated -> ScriptRuntimeException: boom
+12:42:59  INFO [RimLua][smoke] PASS csharp-call-lua: ok
+12:42:59  INFO [RimLua][smoke] PASS TestConsoleService: console expression -> -> 42  [Ok in 0.9 ms, slices=1]
+12:42:59  INFO [RimLua][smoke] PASS console-service: ok
+12:42:59  INFO [RimLua][smoke] PASS TestApiDump: api dump contains registered API and section
+12:42:59  INFO [RimLua][smoke] PASS TestApiDump: api dump written -> D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\api-dump.md
+12:42:59  INFO [RimLua][smoke] PASS api-dump: ok
+12:42:59  INFO [RimLua][loader] self-test script written: D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\scripts\_rimlua_selftest.lua
+12:42:59  INFO [RimLua][smoke] 
+12:42:59  INFO [RimLua][smoke] live-reload: waiting for watcher to execute _rimlua_selftest.lua
+12:42:59  INFO [RimLua][loader] executed local/_rimlua_state_test.lua (Ok in 0.8 ms, slices=1)
+12:42:59  INFO [RimLua][loader] executed local/_rimlua_call_test.lua (Ok in 0.2 ms, slices=1)
+12:42:59  INFO [RimLua][script] live-reload self test executed, rim.version=0.1.0-m0
+12:42:59  WARN [RimLua][loader] script failed local/_rimlua_selftest.lua: Error in 1.2 ms, slices=0, error=ScriptRuntimeException: attempt to perform arithmetic on a table value
+12:42:59  INFO [RimLua][smoke] PASS live-reload: Error in 1.2 ms, slices=0, error=ScriptRuntimeException: attempt to perform arithmetic on a table value
+12:42:59  INFO [RimLua][smoke] 
+12:42:59  INFO [RimLua][smoke] RESULT: PASS (51 passed, 0 failed)
+12:42:59  INFO [RimLua][smoke] moonSharp=3.0.0.0, reports=D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\smoke-report.txt
+12:42:59  INFO [RimLua][smoke] finished: PASS, report=D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\smoke-report.txt
+12:42:59  INFO [RimLua][loader] self-test script written: D:\SteamA\steamapps\common\RimWorld\Mods\AIStory\.quicktest\savedata\Config\RimLua\scripts\_rimlua_selftest.lua
+12:43:00  INFO [RimLua][script] live-reload self test executed, rim.version=0.1.0-m0
+12:43:00  WARN [RimLua][loader] script failed local/_rimlua_selftest.lua: Error in 0.5 ms, slices=0, error=ScriptRuntimeException: attempt to perform arithmetic on a table value

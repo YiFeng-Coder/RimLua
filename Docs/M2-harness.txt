@@ -1,0 +1,18 @@
+﻿runtime=.NET 10.0.13
+rimlua=0.1.0.0
+PASS function: status=Ok return=42 error=
+PASS array: status=Ok return=10 error=
+PASS global: status=Ok return=harness error=
+PASS api budget rejected: Error / ScriptRuntimeException: [harness.slow] API exceeded budget (43.7 ms > 10 ms)
+PASS api stats budget violation recorded
+PASS define functions: Ok in 4.5 ms, slices=1
+PASS CallFunction add: Ok: 42 (0.7 ms)
+PASS CallFunction missing rejected: function not found: nope
+PASS CallFunction error propagated: ScriptRuntimeException: boom
+PASS state run 1: Ok in 0.9 ms, slices=1
+PASS state run 2: Ok in 0.2 ms, slices=1
+PASS state count=2: {"count":2}
+PASS state survives save/load: {"count":2}
+PASS console expression executed: -> 42  [Ok in 0.2 ms, slices=1]
+PASS api dump contains registered APIs
+RESULT: PASS (15 passed, 0 failed)
